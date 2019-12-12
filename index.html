@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" 
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Password Generator</h1>
+      </header>
+      <div class="card">
+        <div class="card-header">
+          <h2>Password Options</h2>
+        </div>
+        <div class="card-body">
+          <label for="txtPswdLength" >Password Length (8-128):</label>
+          <input id="txtPswdLength" type="text" inputmode="numeric" maxlength="3" value="12" /><br/>
+          <input id="cbxSpecialChar" type="checkbox" checked="checked"/><label for="cbxSpecialChar" class="indent" >Special Characters ( !#$%&()*+,-./:;=?@[]^_{|}~ )</label><br/>
+          <input id="cbxNumbers" type="checkbox" checked="checked"/><label for="cbxNumbers" class="indent" >Numbers (0-9)</label><br/>
+          <input id="cbxUppercase" type="checkbox" checked="checked"/><label for="cbxUppercase" class="indent" >Uppercase (A-Z)</label><br/>
+          <input id="cbxLowercase" type="checkbox" checked="checked"/><label for="cbxLowercase" class="indent" >Lowercase (a-z)</label>
+          
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header">
+          <h2>Generated Password</h2>
+        </div>
+        <div class="card-body">
+          <textarea
+            readonly
+            id="password"
+            placeholder="Your Secure Password"
+            aria-label="Generated Password"
+          ></textarea>
+        </div>
+        <div class="card-footer">
+          <button id="generate" class="btn btn-primary btn-lg">Generate Password</button>
+          <button  id="toClipboard" class="btn btn-secondary btn-lg float-right" disabled="disabled" >Copy to Clipboard</button>
+        </div>
+      </div>
+      
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

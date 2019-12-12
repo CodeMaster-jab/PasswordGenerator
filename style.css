@@ -1,0 +1,20 @@
+header, textarea {
+    text-align: center;
+}
+textarea {
+    width: 100%;
+    height: auto;
+}
+
+.indent {
+    padding-left: 10px;
+}
+#txtPswdLength {
+    width: 60px;
+}
+body {
+    background-color: lightblue;
+}
+.btn {
+    border-radius: 24px;
+}
